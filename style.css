@@ -65,7 +65,7 @@ body {
 
 /* --- メインコンテンツ --- */
 .portfolio__main {
-  min-height: 100vh;               /* 100vh 以上になるなら伸びてOK */
+  min-height: 100dvh;               /* 100dvh 以上になるなら伸びてOK */
   padding: 2rem;
   display: flex;
   flex-direction: column;
