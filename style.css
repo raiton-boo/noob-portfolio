@@ -1,0 +1,102 @@
+/* リセット系 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ベース */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- ヘッダー部分 --- */
+.portfolio__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.portfolio__header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("image.png");
+  background-size: cover;          /* 画像をコンテナにピッタリ */
+  filter: blur(6px);
+  z-index: 0;
+  pointer-events: none;            /* 背景画像にクリックとか影響させない */
+}
+
+/* ロゴ */
+.portfolio__logo {
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  font-size: clamp(2rem, 6vw, 6rem); /* 画面サイズに合わせて調整 */
+  letter-spacing: 0.5vw;
+  z-index: 1;
+  user-select: none;               /* ロゴのテキスト選択を防ぐ */
+}
+
+.logo__primary {
+  font-weight: 700;
+  border-bottom: 0.2vw solid #ffffff;
+}
+
+.logo__secondary {
+  font-weight: 500;
+  color: #ff6b81;
+  border-bottom: 0.2vw solid #ff6b81;
+}
+
+/* --- メインコンテンツ --- */
+.portfolio__main {
+  min-height: 100vh;               /* 100vh 以上になるなら伸びてOK */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #2e2e2e;      /* 少し変化つけて区切り */
+}
+
+/* 各セクション */
+.portfolio__section {
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* 影で浮いてる感 */
+  transition: background-color 0.3s ease;
+}
+
+.portfolio__section:hover {
+  background-color: #555; /* ホバーでちょい明るく */
+}
+
+/* GitHubリンク */
+.portfolio__github {
+  height: 50px;
+  background-color: #222;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
