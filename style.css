@@ -7,7 +7,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -33,14 +34,14 @@ body {
 }
 
 .portfolio__header::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-image: url("sorceCode.png");
-  background-size: cover;          /* 画像をコンテナにピッタリ */
+  background-image: url('sorceCode.png');
+  background-size: cover; /* 画像をコンテナにピッタリ */
   filter: blur(6px);
   z-index: 0;
-  pointer-events: none;            /* 背景画像にクリックとか影響させない */
+  pointer-events: none; /* 背景画像にクリックとか影響させない */
 }
 
 /* ロゴ */
@@ -67,20 +68,31 @@ body {
   border-bottom: 0.15em solid #ffffff;
 }
 
+@keyframes blinkText {
+  0%,
+  49% {
+    color: #00ffc8; /* 普通に表示 */
+  }
+  50%,
+  100% {
+    color: transparent; /* 文字だけ消す！ */
+  }
+}
 .logo__secondary {
-  color: #00ffc8; /* ← テック系ネオングリーン！ */
   font-weight: 700;
+  color: #00ffc8;
   border-bottom: 0.15em solid #00ffc8;
+  animation: blinkText 1s step-start infinite;
 }
 
 /* --- メインコンテンツ --- */
 .portfolio__main {
-  min-height: 100dvh;               /* 100dvh 以上になるなら伸びてOK */
+  min-height: 100dvh; /* 100dvh 以上になるなら伸びてOK */
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #2e2e2e;      /* 少し変化つけて区切り */
+  background-color: #2e2e2e; /* 少し変化つけて区切り */
 }
 
 /* 各セクション */
@@ -88,7 +100,7 @@ body {
   background-color: #444;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* 影で浮いてる感 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 影で浮いてる感 */
   transition: background-color 0.3s ease;
 }
 
