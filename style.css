@@ -23,8 +23,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- ヘッダー部分 --- */
-.portfolio__header {
+/* --- ヒーローセクション --- */
+.hero {
   position: relative;
   display: flex;
   justify-content: center;
@@ -33,22 +33,43 @@ body {
   overflow: hidden;
 }
 
-.portfolio__header::before {
+.hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image: url('sorceCode.png');
-  background-size: cover; /* 画像をコンテナにピッタリ */
+  background-size: cover;
   filter: blur(6px);
   z-index: 0;
-  pointer-events: none; /* 背景画像にクリックとか影響させない */
+  pointer-events: none;
 }
 
 /* ロゴ */
-.portfolio__logo {
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('sorceCode.png');
+  background-size: cover;
+  filter: blur(6px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ロゴ全体 */
+.hero__logo {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(2rem, 6vw, 6rem);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2rem;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -56,56 +77,58 @@ body {
   line-height: 1.2;
 }
 
-.logo__line {
+/* 各行 */
+.hero__logo-line {
   display: block;
   font-weight: 700;
   margin-bottom: 0.2em;
 }
 
-.logo__primary {
+.hero__logo-primary {
   color: #ffffff;
   font-weight: 700;
-  border-bottom: 0.15em solid #ffffff;
 }
 
-@keyframes blinkText {
-  0%,
-  49% {
-    color: #00ffc8; /* 普通に表示 */
-  }
-  50%,
-  100% {
-    color: transparent; /* 文字だけ消す！ */
-  }
-}
-.logo__secondary {
+/* Code（点滅） */
+.hero__logo-secondary {
   font-weight: 700;
   color: #00ffc8;
-  border-bottom: 0.15em solid #00ffc8;
   animation: blinkText 1s step-start infinite;
 }
 
+/* 点滅アニメーション */
+@keyframes blinkText {
+  0%,
+  49% {
+    color: #00ffc8;
+  }
+  50%,
+  100% {
+    color: transparent;
+  }
+}
+
 /* --- メインコンテンツ --- */
-.portfolio__main {
-  min-height: 100dvh; /* 100dvh 以上になるなら伸びてOK */
+.main {
+  min-height: 100dvh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #2e2e2e; /* 少し変化つけて区切り */
+  background-color: #2e2e2e;
 }
 
-/* 各セクション */
-.portfolio__section {
+/* 各セクション共通 */
+.main__section {
   background-color: #444;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 影で浮いてる感 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
 }
 
-.portfolio__section:hover {
-  background-color: #555; /* ホバーでちょい明るく */
+.main__section:hover {
+  background-color: #555;
 }
 
 /* Aboutセクション */
@@ -115,7 +138,7 @@ body {
 }
 
 /* GitHubリンク */
-.portfolio__github {
+.links__github {
   height: 50px;
   background-color: #222;
   border-radius: 4px;
