@@ -36,7 +36,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("image.png");
+  background-image: url("sorceCode.png");
   background-size: cover;          /* 画像をコンテナにピッタリ */
   filter: blur(6px);
   z-index: 0;
