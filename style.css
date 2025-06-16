@@ -37,28 +37,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('sorceCode.png');
-  background-size: cover;
-  filter: blur(6px);
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* ロゴ */
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('sorceCode.png');
+  background-image: url('assets/images/sorceCode.png');
   background-size: cover;
   filter: blur(6px);
   z-index: 0;
