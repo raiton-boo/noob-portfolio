@@ -13,10 +13,11 @@ html, body {
 
 /* ベース */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 1.3rem;
   background-color: #3a3a3a;
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -93,6 +94,12 @@ body {
 
 .portfolio__section:hover {
   background-color: #555; /* ホバーでちょい明るく */
+}
+
+/* Aboutセクション */
+.about__title {
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 /* GitHubリンク */
