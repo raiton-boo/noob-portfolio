@@ -9,7 +9,8 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 /* ベース */
@@ -99,15 +100,10 @@ body {
 
 /* 各セクション共通 */
 .main__section {
-  background-color: #444;
+  background-color: #555;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-}
-
-.main__section:hover {
-  background-color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 /* Aboutセクション */
@@ -116,17 +112,84 @@ body {
   color: #fff;
 }
 
-/* GitHubリンク */
-.links__github {
-  height: 50px;
-  background-color: #222;
-  border-radius: 4px;
+/*.Skillsセクション */
+.skills {
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills__title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.skills__category {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.skills__category:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.skills__category h3 {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #60a5fa;
+  padding-left: 0.5em;
+  font-weight: 700;
+  background: transparent;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.skills__category ul {
+  list-style: none;
+  padding-left: 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.skills__category li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.4em 1em;
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(96,165,250,0.07);
+  display: flex;
   align-items: center;
-  color: #eee;
+  gap: 0.5em;
+  transition: box-shadow 0.2s;
+}
+
+.skills__category li:hover {
+  box-shadow: 0 2px 8px rgba(96,165,250,0.13);
+}
+
+.skills__level {
+  background: #60a5fa;
+  color: #fff;
+  font-size: 0.85em;
+  border-radius: 12px;
+  padding: 0.1em 0.7em;
+  margin-left: 0.5em;
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
+  letter-spacing: 0.03em;
+  box-shadow: 0 1px 4px rgba(96,165,250,0.13);
 }
