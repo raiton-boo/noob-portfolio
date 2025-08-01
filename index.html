@@ -50,23 +50,20 @@
 
     <main class="main">
       <section class="about main__section">
-        <h2 class="about__title">About Me</h2>
-        <p class="about__text">
-          エンジニアを目指して日々スキルアップ中の<strong>らいと</strong>です！
-        </p>
-        <p class="about__text">
-          Web制作やLINE
-          BOTの開発に取り組みながら、楽しさと使いやすさのバランスを大切にしています。
-        </p>
-        <p class="about__text">
-          「遊び心」と「実用性」、その両方を追い求めるのがボクのスタイル。制限のある環境でも、工夫してやり切る根性には自信があります🔥
-        </p>
-        <p class="about__text">
-          このポートフォリオでは、ボクが作ってきた作品や得意なことを紹介していきます。よかったらゆっくり見てってください！
-        </p>
-        <p class="about__text">
-          趣味はバイクに乗ること、友達とゲームしたりチームプレイで盛り上がることが大好きです🏍🎮
-        </p>
+        <img
+          src="assets/images/icon.JPG"
+          alt="プロフィール画像"
+          class="about__image"
+        />
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p>
+            想像力はあっても技術力が追いついてない初心者です。<br />主にBot開発をしており、最近はGoやAWSも学習中です。
+          </p>
+          <p>
+            趣味はコーディングと新しい技術の学習で、常に成長し続けることを目標にしています。
+          </p>
+        </div>
       </section>
 
       <section class="skills main__section">
@@ -115,6 +112,74 @@
 
       <section class="works main__section">
         <h2 class="works__title">My Works</h2>
+        <div class="works__grid">
+          <div class="works__item">
+            <div class="works__image">
+              <div class="works__placeholder">🌐</div>
+            </div>
+            <div class="works__content">
+              <h3 class="works__item-title">love-site</h3>
+              <p class="works__description">
+                セクション幅によって、愛を伝える文字が変わるサイト。
+                大切な人に見せましょう。
+              </p>
+              <div class="works__tech">
+                <span class="works__tech-tag">Vanilla JS</span>
+                <span class="works__tech-tag">HTML/CSS</span>
+              </div>
+              <div class="works__links">
+                <a
+                  href="https://github.com/raiton-boo/love-site"
+                  class="works__link"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+
+                <a
+                  href="https://raiton-boo.github.io/love-site/"
+                  class="works__link"
+                  target="_blank"
+                  rel="noopener"
+                  >Website</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="works__item">
+            <div class="works__image">
+              <div class="works__placeholder">⚡</div>
+            </div>
+            <div class="works__content">
+              <h3 class="works__item-title">LINEBot-Error-Analyzer</h3>
+              <p class="works__description">
+                Messaging APIのエラーの集大成。
+                エラーコードから原因と対処法を提供するライブラリ
+              </p>
+              <div class="works__tech">
+                <span class="works__tech-tag">Python</span>
+                <span class="works__tech-tag">型ヒント</span>
+              </div>
+              <div class="works__links">
+                <a
+                  href="https://github.com/raiton-boo/linebot-error-analyzer"
+                  class="works__link"
+                  target="_blank"
+                  rel="noopener"
+                  >Github</a
+                >
+                <a
+                  href="https://pypi.org/project/linebot-error-analyzer/"
+                  class="works__link"
+                  target="_blank"
+                  rel="noopener"
+                  >PyPI</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
